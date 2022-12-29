@@ -19,7 +19,6 @@ namespace NorthwindConsole.TestApi
 		//{
 		//	try
 		//	{
-
 		//		var responce = _httpClient.GetAsync("api/categories").Result;
 		//		if (responce.IsSuccessStatusCode)
 		//		{
@@ -30,7 +29,6 @@ namespace NorthwindConsole.TestApi
 		//	}
 		//	catch (Exception ex)
 		//	{
-
 		//		await Console.Out.WriteLineAsync(ex.Message);
 		//	}
 		//	return _categories;

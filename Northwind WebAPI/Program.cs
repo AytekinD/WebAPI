@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using Northwind_WebAPI.Entities;
+using Northwind_WebAPI.Models;
 
 namespace Northwind_WebAPI
 {
@@ -11,7 +12,7 @@ namespace Northwind_WebAPI
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
-
+			builder.Services.AddSingleton<RedisManager, RedisManager>();
 			builder.Services.AddControllers();
 			builder.Services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("northwind")));
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
